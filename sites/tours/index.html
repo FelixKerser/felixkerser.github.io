@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-9">
+    <title>Tours</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <div id="main-container">
+        <header id="header">
+            <span class="logo">
+                <img class="logo__img" src="img/logo.png">
+                <span class="logo__name">WAVES</span>
+
+                <span class="item"><a href="#">Home</a></span>
+                <span class="item"><a href="#">Tours</a></span>
+                <span class="item"><a href="#">Hotels</a></span>
+                <span class="item telephone"><a href="#">+380 95-366-56-74</a></span>
+                
+                <span class="burger-menu mob" onclick="jopa()"></span>
+
+            </span>
+            <div class="hidden-menu">
+                <span class="item-mob"><a href="#">Home</a></span>
+                <span class="item-mob"><a href="#">Tours</a></span>
+                <span class="item-mob"><a href="#">Hotels</a></span>
+                <span class="item-mob telephone-mob"><a href="#">+380 95-366-56-74</a></span>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="text-with-button">
+                <h1 class="big-text">Start to travel<br/>
+                with us</h1>
+
+                <button class="blue-bg shop-btn mob mob-button">Start</button>
+            </div>
+
+            <div class="products">
+
+                <button class="blue-bg shop-btn comp">Start</button>
+
+                <div class="product first">
+                    <span class="product__text">
+                        <span class="text__big">Sea tour</span><br/>
+                        <span class="text__small">Tour to the Baltic sea</span><br/>
+                        <button class="blue-bg buy-btn">100$</button>
+                    </span>
+                </div>
+
+                <div class="product second">
+                    <span class="product__text">
+                        <span class="text__big">Ocean tour</span><br/>
+                        <span class="text__small">Tour to Atlantic ocean</span><br/>
+                        <button class="blue-bg buy-btn">150$</button>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    let menuBtn = document.querySelector('.burger-menu');
+    let menu = document.querySelector('.hidden-menu');
+    menuBtn.addEventListener('onclick', function(){
+        menu.classList.toggle('active');
+    })
+    
+    function jopa(){
+        menu.classList.toggle('active');
+    }
+            </script>
+</html>
