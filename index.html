@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
 
@@ -7,21 +7,29 @@
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/normalize.min.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="all">
     <header class="header">
         <div class="name">
-            <span class="name__text">
+            <a class="name__text" href="/">
                 Кирилл Малёваный
-            </span>
+            </a>
         </div>
 
         <ul class="list">
-            <li class="list__content"><a class="list__a active" href="#"><span class="num">01 </span>Главная</a></li>
+            <li class="list__content"><a class="list__a active" href="/"><span class="num">01 </span>Главная</a></li>
             <li class="list__content"><a class="list__a non-active" target="_blank" href="https://freelancehunt.com/freelancer/FelixKerser.html"><span class="num">02 </span>Профиль</a></li>
         </ul>
+        <div id="burger">
+            <img id="burger__icon" src="img/burger.png">
+        </div>
+
     </header>
+
+    <div id="full-screen-menu">
+    </div>
 
     <div class="main">
         <div class="title">
@@ -34,7 +42,7 @@
             </div>
 
             <div class="show">
-                <span class="show__text">Фронтенд разрабочтик, CMS разработчик, фрилансер</span>
+                <span class="show__text">Фронтенд разработчик, CMS разработчик, фрилансер</span>
             </div>
         </div>
 
@@ -44,7 +52,7 @@
                 <spam class="catalog__text off">Сайты, которые были созданы для портфолио</spam>
             </div>
 
-            <div class="list">
+            <div class="catalog__list">
 
                 <a class="list__item" href="sites/tours/index.html">
                     <span class="list__name"></span>
@@ -74,4 +82,7 @@
     </div>
 </footer>
 </body>
+
+<script src="js/burger.js"></script>
+
 </html>
