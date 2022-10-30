@@ -21,7 +21,7 @@ let openburger = function(){
     ul.style.opacity="1";
 
     for (let element of li){
-        element.style.transition="4s";
+        element.style.transition="1.3s ease .4s";
         element.style.paddingTop="50px";
     }
 
