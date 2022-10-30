@@ -133,6 +133,10 @@ a{
 
 /* Catalog */
 
+.catalog__list{
+    display:flex;
+}
+
 .catalog__title{
     padding: 2rem 0 2rem;
 }
@@ -217,15 +221,43 @@ border-radius:40px 40px 0 0;
     #full-screen-menu{
         display:block;
         position:fixed;
-        height:100vh;
-        width:100vw;
+        height:50vh;
+        width:200vw;
         opacity:0;
         background:black;
         bottom: 0;
         left: 0;
         z-index: -1;
-        transition: opacity .5s linear .25s,transform .5s cubic-bezier(.4,0,.2,1) .25s;
-        
+        transition: .4s, height 1s, transform 1s, border-radius 1s;
+        border-radius: 1000px;
+        transform: scale(.5, .5);
+        top:-25%;
+    }
+
+    #burger-ul{
+        opacity:0;
+        transition:3.5s;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        height:100vh;
+        padding-left:0;
+        align-items: center;
+        flex-direction: column;
+        padding-top:0;
+    }
+
+    .burger__li{
+        transition:4s;
+    }
+
+    .burger__li:first-child{
+        padding-top:0 !important;
+    }
+
+    .burger__a{
+        font-size:25px;
+        font-weight: 700;
     }
 
     .burger{
@@ -236,7 +268,7 @@ border-radius:40px 40px 0 0;
         display:none;
     }
     
-    #burger{
+    #burger, #x{
         background-color: #252526;
         border-radius: 50%;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -244,8 +276,19 @@ border-radius:40px 40px 0 0;
         padding:1rem .8rem;
     }
 
-    #burger__icon{
+    #x{
+        display: none;
+        z-index: 70;
+        padding: 13px 15px 12px 15px;
+    }
+
+    #burger__icon, #x__icon{
         width:25px;
+    }
+
+    #x__icon{
+        filter: invert(100%);
+        width:20px;
     }
 
     /*Main*/
@@ -269,5 +312,22 @@ border-radius:40px 40px 0 0;
     /*footer*/
     .footer{
         padding: 1.5rem 3rem;
+    }
+
+    .passion__text{
+        font-size: 2.875rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .catalog__list{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #full-screen-menu{
+        margin-top: 10px;
+        margin-left: 5px;
     }
 }
