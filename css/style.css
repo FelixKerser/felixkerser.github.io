@@ -158,13 +158,19 @@ a{
     position:relative; 
     transition: background-size .3s ease-in;
     -moz-transition: background-size .3s ease-in;
+    margin-left:50px;
+}
+
+.list__item:first-child{
+    margin-left:0;
 }
 
 .list__item:hover{
     background-size: 130% 110%;
 }
 
-.list__name:before{
+
+.tours:before{
     content:'Сайт турагенства';
     background:linear-gradient(rgba(0, 0, 0, .8) 60%, rgba(0, 0, 0, .3) 90%);
     width:100%;
@@ -183,6 +189,29 @@ a{
     font-size: 1.75rem;
     line-height: 1.4;
     margin-bottom: 0.5rem;
+}
+
+.x-project{
+    background:linear-gradient(rgba(0, 0, 0, .2), rgba(0,0,0,.2)), url('../img/x-project.png') center center;
+    background-size: 140% 100%;
+}
+
+.x-project:hover{
+    background-size: 160% 120%;
+}
+
+.x-project__name:before{
+    content:'X-Project';
+    background:linear-gradient(rgba(0, 0, 0, .8) 60%, rgba(0, 0, 0, .3) 90%);
+    width:100%;
+    height:100px;
+    position:absolute;
+    right:0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top:0;
+    border-radius:40px 40px 0 0;
 }
 
 /* Footer */
@@ -315,7 +344,7 @@ a{
 
     /*footer*/
     .footer{
-        padding: 1.5rem 3rem;
+        padding: 1.5rem 1rem;
     }
 
     .passion__text{
@@ -326,6 +355,17 @@ a{
 @media screen and (max-width: 750px) {
     .catalog__list{
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list__item{
+        margin-left:0;
+        margin-top:50px;
+    }
+
+    .list__item:first-child{
+        margin-top:0;
     }
 }
 

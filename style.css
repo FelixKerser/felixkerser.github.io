@@ -149,6 +149,14 @@ top:0;
 border-radius:40px 40px 0 0;
 }
 
+.x-project{
+    background:linear-gradient(rgba(0, 0, 0, .2), rgba(0,0,0,.2)), url('img/x-project.png') center center;
+}
+
+.x-project:before{
+    content:'X-Project';
+}
+
 .list__name{
     font-weight: 500;
     font-size: 1.75rem;
